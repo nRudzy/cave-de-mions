@@ -39,6 +39,7 @@ cave-de-mions/
 └── package.json       # Dépendances et scripts
 ```
 
+
 ## Développement
 
 Pour le développement, l'application utilise le mode développement de Vite avec le rechargement à chaud (hot reload). Les modifications du code source seront automatiquement reflétées dans le navigateur.
