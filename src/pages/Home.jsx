@@ -9,7 +9,7 @@ function Home() {
     >
       <div className="hero-content">
         <h1>La Cave de Mions</h1>
-        <p className="slogan">Des bulles ou du raisin, c'est toujours entre copains</p>
+        <p className="slogan">"Des bulles ou du raisin, c'est toujours entre copains"</p>
         <div className="cta-buttons">
           <Link to="/produits" className="btn btn-primary">
             Découvrir nos produits
