@@ -1,20 +1,28 @@
 .contact-section {
+  padding: 6rem 2rem;
   background-color: var(--background-color);
-  padding: 4rem 2rem;
+}
+
+.section-header {
   text-align: center;
-}
-
-.contact-section h2 {
-  margin-bottom: 1rem;
-}
-
-.contact-section > p {
   max-width: 800px;
-  margin: 0 auto 3rem;
-  color: var(--text-color);
+  margin: 0 auto 4rem;
 }
 
-.contact-grid {
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.contact-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -24,49 +32,89 @@
 
 .contact-block {
   background-color: var(--light-color);
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
-.contact-block h4 {
+.contact-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon i {
+  font-size: 1.5rem;
+  color: var(--light-color);
+}
+
+.contact-content h4 {
   color: var(--primary-color);
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
-.contact-block p {
+.contact-content p {
   margin-bottom: 1rem;
   line-height: 1.6;
+  color: var(--text-color);
+  opacity: 0.8;
 }
 
-.contact-block a {
+.contact-link {
   color: var(--accent-color);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
+  display: inline-block;
+  margin-top: 0.5rem;
 }
 
-.contact-block a:hover {
-  color: var(--primary-color);
+.contact-link:hover {
+  color: var(--accent-color-dark);
+}
+
+.address {
+  font-weight: 500;
 }
 
 @media (max-width: 992px) {
-  .contact-grid {
+  .contact-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .contact-section {
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
   }
   
-  .contact-grid {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-container {
     grid-template-columns: 1fr;
   }
   
   .contact-block {
     padding: 1.5rem;
+  }
+  
+  .contact-content h4 {
+    font-size: 1.2rem;
   }
 } 

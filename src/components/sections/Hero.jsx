@@ -3,10 +3,10 @@ import '../../styles/components/Hero.css'
 
 function Hero() {
   return (
-    <section 
-      className="hero" 
-      style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)))` }}
-    >
+    <section className="hero">
+      <div className="hero-background">
+        <div className="hero-overlay"></div>
+      </div>
       <div className="hero-content">
         <h1>Bienvenue à la Cave de Mions</h1>
         <p className="slogan">Profitez d'une sélection variée de vins, bières, spiritueux et charcuteries pour savourer ensemble des moments de convivialité. Des conseils avisés vous seront réservés.</p>
