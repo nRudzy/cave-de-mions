@@ -1,0 +1,72 @@
+.contact-section {
+  background-color: var(--background-color);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-section > p {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: var(--text-color);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-block {
+  background-color: var(--light-color);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-block h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.contact-block p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.contact-block a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contact-block a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 1rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-block {
+    padding: 1.5rem;
+  }
+} 

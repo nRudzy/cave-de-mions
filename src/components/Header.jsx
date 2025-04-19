@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/logo_hd_cave_de_mions.png'
+import logo from '../assets/logo_hd_cave_de_mions_white.png'
+import '../styles/components/Header.css'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,7 +14,7 @@ function Header() {
     <header className="header">
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="La Cave de Mions" />
+          <img src={logo} alt="Cave de Mions" />
         </Link>
       </div>
       <button 
@@ -27,11 +28,11 @@ function Header() {
       </button>
       <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
         <ul>
-          <li><Link to="/" onClick={toggleMenu}>Accueil</Link></li>
-          <li><Link to="/produits" onClick={toggleMenu}>Nos Produits</Link></li>
-          <li><Link to="/evenements" onClick={toggleMenu}>Événements</Link></li>
-          <li><Link to="/histoire" onClick={toggleMenu}>Notre Histoire</Link></li>
-          <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
+          <li><Link to="/">Accueil</Link></li>
+          <li><Link to="/products">Nos Produits</Link></li>
+          <li><Link to="/services">Services</Link></li>
+          <li><Link to="/about">À propos</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
       </nav>
     </header>
