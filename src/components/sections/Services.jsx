@@ -4,7 +4,7 @@ import '../../styles/components/Services.css'
 
 function Services() {
   return (
-    <section className="services">
+    <section className="services-grid">
       <div className="section-header">
         <h2>Des services pour chaque occasion</h2>
         <p>Retrouvez les services proposés par la Cave de Mions pour partager et profiter pleinement de moments gourmands</p>
@@ -22,14 +22,16 @@ function Services() {
           </div>
         </div>
 
-        <div className="service-block">
-          <div className="service-image">
-            <img src={locationImg} alt="Location" />
-          </div>
-          <div className="service-content">
-            <h3>Savourez l'authenticité d'une bière pression chez vous</h3>
-            <p>Pour vos évènements, mariages, anniversaires ou simples soirées,<br />
-            contactez la Cave de Mions pour connaître nos offres de location et réservation.</p>
+        <div className="service-container">
+          <div className="service-block">
+            <div className="service-image">
+              <img src={locationImg} alt="Location" />
+            </div>
+            <div className="service-content">
+              <h3>Savourez l'authenticité d'une bière pression chez vous</h3>
+              <p>Pour vos évènements, mariages, anniversaires ou simples soirées,<br />
+              contactez la Cave de Mions pour connaître nos offres de location et réservation.</p>
+            </div>
           </div>
         </div>
       </div>
