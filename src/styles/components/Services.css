@@ -67,7 +67,7 @@
 }
 
 .service-content {
-  padding: 1.5rem;
+  padding: 2rem 0;
 }
 
 .service-content h3 {
@@ -110,10 +110,6 @@
 }
 
 @media (max-width: 768px) {
-  .service-content {
-    padding: 2rem 0;
-  }
-
   .section-header h2 {
     font-size: 2rem;
   }

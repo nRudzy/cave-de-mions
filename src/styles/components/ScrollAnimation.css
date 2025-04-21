@@ -1,0 +1,37 @@
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation spécifique pour les éléments qui doivent apparaître de la gauche */
+.scroll-animation.from-left {
+  transform: translateX(-30px);
+}
+
+.scroll-animation.from-left.animate-in {
+  transform: translateX(0);
+}
+
+/* Animation spécifique pour les éléments qui doivent apparaître de la droite */
+.scroll-animation.from-right {
+  transform: translateX(30px);
+}
+
+.scroll-animation.from-right.animate-in {
+  transform: translateX(0);
+}
+
+/* Animation spécifique pour les éléments qui doivent apparaître avec un zoom */
+.scroll-animation.zoom-in {
+  transform: scale(0.95);
+}
+
+.scroll-animation.zoom-in.animate-in {
+  transform: scale(1);
+} 

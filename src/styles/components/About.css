@@ -52,7 +52,7 @@
 }
 
 .about-content {
-  padding: 2rem;
+  padding: 0;
 }
 
 .about-content h3 {
@@ -76,10 +76,6 @@
 }
 
 @media (max-width: 768px) {
-  .about-content {
-    padding: 0;
-  }
-
   .section-header h2 {
     font-size: 2rem;
   }
