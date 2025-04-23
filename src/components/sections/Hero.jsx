@@ -12,7 +12,7 @@ function Hero() {
         <p className="slogan">Profitez d'une sélection variée de vins, bières, spiritueux et charcuteries pour savourer ensemble des moments de convivialité. Des conseils avisés vous seront réservés.</p>
         <p className="quote">" Des bulles ou du raisin, c'est toujours entre copains "</p>
         <div className="cta-buttons">
-          <Link to="/contact" className="btn btn-primary">
+          <Link to="/contact" className="btn btn-secondary">
             Contactez nous
           </Link>
         </div>

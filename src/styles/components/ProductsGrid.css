@@ -1,6 +1,6 @@
 .products-grid {
   padding: 6rem 2rem;
-  background-color: var(--light-color);
+  background-color: var(--section-background-color);
 }
 
 .section-header {
@@ -31,7 +31,7 @@
 }
 
 .product-block {
-  background-color: var(--light-color);
+  background-color: var(--section-background-color);
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;

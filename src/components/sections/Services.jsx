@@ -22,7 +22,7 @@ function Services() {
             </div>
             <div className="service-content">
               <h3>Le plaisir d'offrir</h3>
-              <p>Offrez à vos proches le plaisir d'une dégustation avec nos bons cadeaux et paniers garnis,<br />
+              <p>Faites plaisir à vos proches grâce à nos bons cadeaux et paniers garnis,<br />
               soigneusement composés de vins, spiritueux et gourmandises artisanales pour toutes les occasions.</p>
             </div>
           </div>
