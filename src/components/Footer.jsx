@@ -39,7 +39,7 @@ function Footer() {
       
       <div className="footer-bottom">
         <div className="social-links">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/lacavedemions" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-facebook"></i>
           </a>
           <a href="https://www.instagram.com/lacavedemions" target="_blank" rel="noopener noreferrer">
