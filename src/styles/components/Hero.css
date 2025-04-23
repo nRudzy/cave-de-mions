@@ -100,9 +100,8 @@
   .hero .quote {
     font-size: 1.2rem;
   }
-  
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
+
+  .hero .cta-buttons .btn {
+    width: unset;
   }
 } 
