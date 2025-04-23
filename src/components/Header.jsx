@@ -31,7 +31,7 @@ function Header() {
       <div className="header-container">
         <div className="logo">
           <Link to="/">
-            <img src={logo} alt="Cave de Mions" />
+            <img src={isMenuOpen ? logoWhite : (isScrolled ? logo : logoWhite)} alt="Cave de Mions" />
           </Link>
         </div>
         <button 
