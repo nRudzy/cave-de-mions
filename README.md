@@ -1,121 +1,64 @@
-# La Cave de Mions - Application React
+# La Cave de Mions
 
-Cette application web est une version modernisée du site de La Cave de Mions, construite avec React et conteneurisée avec Docker.
+Site vitrine React 18 / Vite avec une page d'accueil et une page Contact.
+La livraison Hostinger est entièrement statique : aucun serveur Node.js n'est
+nécessaire sur l'hébergement.
 
-## Prérequis
+## Développement local
 
-- Docker
-- Docker Compose
-
-## Installation et démarrage
-
-1. Cloner le repository :
-```bash
-git clone [URL_DU_REPO]
-cd cave-de-mions
-```
-
-2. Construire et démarrer les conteneurs :
-```bash
-docker-compose up --build
-```
-
-L'application sera accessible à l'adresse : http://localhost:3000
-
-## Structure du projet
-
-```
-cave-de-mions/
-├── src/
-│   ├── components/     # Composants React réutilisables
-│   ├── pages/         # Pages de l'application
-│   ├── assets/        # Images et autres ressources
-│   ├── data/          # Données statiques
-│   ├── App.jsx        # Composant principal
-│   └── main.jsx       # Point d'entrée
-├── public/            # Fichiers statiques
-├── Dockerfile         # Configuration Docker
-├── docker-compose.yml # Configuration Docker Compose
-└── package.json       # Dépendances et scripts
-```
-
-
-## Développement
-
-Pour le développement, l'application utilise le mode développement de Vite avec le rechargement à chaud (hot reload). Les modifications du code source seront automatiquement reflétées dans le navigateur.
-
-## Production
-
-Pour construire l'application pour la production :
+Prérequis : Node.js 20 ou supérieur et npm.
 
 ```bash
-docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build
+npm ci
+npm run dev
 ```
 
-## Commandes utiles
+Le site est disponible sur http://localhost:3000 avec rechargement automatique.
+Les images utilisées sont dans `src/assets/`. Les composants de l'accueil sont
+dans `src/components/sections/` et la page Contact dans `src/pages/Contact.jsx`.
 
-- Démarrer l'application : `docker-compose up`
-- Arrêter l'application : `docker-compose down`
-- Voir les logs : `docker-compose logs -f`
-- Reconstruire l'application : `docker-compose up --build`
+## Compilation et vérifications
 
-## Technologies utilisées
+```bash
+npm run build:seo
+npm run test:production
+```
 
-- React 18
-- React Router v6
-- Vite
-- Docker
-- Node.js 20
-- Font Awesome
+Le prérendu utilise React pendant la compilation et ne nécessite pas Chrome.
+Il produit les fichiers HTML de chaque page avec les ressources absolues
+`/assets/`, pour une publication à la racine de https://cavedemions.com.
 
-## Fonctionnalités
+```text
+dist/
+  .htaccess
+  index.html
+  contact/index.html
+  404.html
+  assets/
+  robots.txt
+  sitemap.xml
+```
 
-- Design mobile-first responsive
-- Menu de navigation hamburger pour mobile
-- Slider de produits
-- Section événements
-- Formulaire de contact
-- Intégration Google Maps
-- Animations au scroll
-- Lazy loading des images
+`npm run build` seul produit le bundle Vite sans le prérendu. Utiliser
+`npm run build:seo` pour la livraison. Les tests de production vérifient les
+pages générées, les chemins des ressources et les métadonnées.
 
-## Configuration
+## Sauvegarde et livraison Hostinger
 
-### Google Maps
-Pour activer la carte Google Maps, vous devez :
+1. Depuis le gestionnaire de fichiers Hostinger, archiver le `public_html`
+   complet, y compris les fichiers cachés comme `.htaccess`. Conserver et
+   télécharger cette sauvegarde **hors du dossier public**. Une copie HTTP des
+   fichiers visibles ne remplace pas cette sauvegarde complète.
+2. Déposer le contenu de `dist/` directement dans `public_html`, en remplaçant
+   les fichiers existants, notamment `.htaccess` et `contact/index.html`.
+   `index.html` doit être à la racine, sans dossier `dist/` intermédiaire.
+3. Vérifier l'accueil, `/contact/`, un rechargement direct de Contact et une URL
+   inexistante après l'envoi. Vérifier également les photos et les liens email
+   sur mobile. Le `.htaccess` définit `index.html` comme page par défaut et
+   `404.html` comme document d'erreur, avec un statut HTTP 404.
+4. Pour revenir en arrière, restaurer le contenu de la sauvegarde complète,
+   y compris son `.htaccess`.
 
-1. Obtenir une clé API Google Maps
-2. Remplacer `YOUR_API_KEY` dans le fichier `index.html` par votre clé API
-
-### Images
-Placez vos images dans le dossier `images/` :
-- `logo.png` : Logo de La Cave de Mions
-- `hero-bg.jpg` : Image d'arrière-plan de la section héro
-- `vins.jpg` : Image pour la section vins
-- `bieres.jpg` : Image pour la section bières
-- `champagnes.jpg` : Image pour la section champagnes
-- `charcuterie.jpg` : Image pour la section charcuterie
-- `histoire.jpg` : Image pour la section histoire
-
-## Compatibilité
-
-- Chrome (dernière version)
-- Firefox (dernière version)
-- Safari (dernière version)
-- Edge (dernière version)
-- iOS Safari
-- Chrome pour Android
-
-## Contribution
-
-Les contributions sont les bienvenues ! N'hésitez pas à :
-
-1. Fork le projet
-2. Créer une branche pour votre fonctionnalité
-3. Commiter vos changements
-4. Pousser vers la branche
-5. Ouvrir une Pull Request
-
-## Licence
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails. 
+Ne pas publier le code source, `node_modules`, `.git`, les sauvegardes ou les
+archives de livraison. Le dossier `build/` est réservé aux livraisons locales
+et est ignoré par Git.

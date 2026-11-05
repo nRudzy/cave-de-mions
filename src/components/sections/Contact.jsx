@@ -7,7 +7,7 @@ function Contact() {
     <section className="contact-section">
       <ScrollAnimation>
         <div className="section-header">
-          <h2>Contactez nous !</h2>
+          <h2>Contactez-nous !</h2>
           <p>Nous sommes là pour répondre à vos questions et vous accompagner au mieux dans vos choix.</p>
         </div>
       </ScrollAnimation>
@@ -20,9 +20,9 @@ function Contact() {
             </div>
             <div className="contact-content">
               <h4>Email</h4>
-              <p>Pour toute demande d'information, de réservation ou de devis personnalisé, écrivez nous :</p>
-              <a href="mailto:contact@lacavedemions.com" className="contact-link">
-                contact@lacavedemions.com
+              <p>Pour toute demande d'information, de réservation ou de devis personnalisé, écrivez-nous :</p>
+              <a href="mailto:contact@cavedemions.com" className="contact-link">
+                contact@cavedemions.com
               </a>
             </div>
           </div>

@@ -31,7 +31,7 @@ function Footer() {
             </p>
             <p className="email">
               <i className="fas fa-envelope"></i>
-              <a href="mailto:contact@lacavedemions.com">contact@lacavedemions.com</a>
+              <a href="mailto:contact@cavedemions.com">contact@cavedemions.com</a>
             </p>
           </div>
         </div>
@@ -39,16 +39,16 @@ function Footer() {
       
       <div className="footer-bottom">
         <div className="social-links">
-          <a href="https://www.facebook.com/lacavedemions" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook"></i>
+          <a href="https://www.facebook.com/lacavedemions" target="_blank" rel="noopener noreferrer" aria-label="La Cave de Mions sur Facebook (nouvel onglet)">
+            <i className="fab fa-facebook" aria-hidden="true"></i>
           </a>
-          <a href="https://www.instagram.com/lacavedemions" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i>
+          <a href="https://www.instagram.com/lacavedemions" target="_blank" rel="noopener noreferrer" aria-label="La Cave de Mions sur Instagram (nouvel onglet)">
+            <i className="fab fa-instagram" aria-hidden="true"></i>
           </a>
         </div>
         
         <p className="disclaimer">L'abus d'alcool est dangereux pour la santé. À consommer avec modération.</p>
-        <p className="copyright">© 2024 La Cave de Mions. Tous droits réservés.</p>
+        <p className="copyright">© {new Date().getFullYear()} La Cave de Mions. Tous droits réservés.</p>
       </div>
     </footer>
   )

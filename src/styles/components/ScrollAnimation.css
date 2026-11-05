@@ -34,4 +34,15 @@
 
 .scroll-animation.zoom-in.animate-in {
   transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animation,
+  .scroll-animation.from-left,
+  .scroll-animation.from-right,
+  .scroll-animation.zoom-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 } 

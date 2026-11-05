@@ -1,4 +1,4 @@
-@import 'src/styles/fonts.css';
+@import './styles/fonts.css';
 
 /* Variables */
 :root {
@@ -205,5 +205,18 @@ main {
   
   .section-header {
     margin-bottom: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
   }
 } 

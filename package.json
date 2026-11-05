@@ -8,6 +8,7 @@
     "build": "vite build",
     "prerender": "node prerender.js",
     "build:seo": "npm run build && npm run prerender",
+    "test:production": "node --test tests/production-build.test.mjs",
     "preview": "vite preview",
     "serve:dist": "npx serve dist"
   },

@@ -1,0 +1,13 @@
+# Site statique publié à la racine de public_html.
+DirectoryIndex index.html
+Options -Indexes
+
+# Les pages existantes (dont /contact/) sont servies directement.
+# Les URL inconnues conservent un véritable statut HTTP 404.
+ErrorDocument 404 /404.html
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

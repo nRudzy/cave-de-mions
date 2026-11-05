@@ -13,7 +13,7 @@ function Hero() {
         <p className="quote">« Des bulles ou du raisin, c'est toujours entre copains »</p>
         <div className="cta-buttons">
           <Link to="/contact" className="btn btn-secondary">
-            Contactez nous
+            Contactez-nous
           </Link>
         </div>
       </div>
